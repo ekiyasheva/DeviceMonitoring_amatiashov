@@ -13,7 +13,7 @@ from services.notificationService import NotificationService
 from services.deviceRegistryService import DeviceRegistryService
 
 
-if os.environ.get("LOG_MODE") == "prod":
+if os.environ.get("LOG_MODE") != "prod":
     # logging in prod mode
     if not os.path.exists(LOG_DIR):
         os.makedirs(LOG_DIR)
